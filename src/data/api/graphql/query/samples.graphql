@@ -1,0 +1,11 @@
+query GetAppearanceSamplesByStandard($parentId: String) {
+  getAppearanceSamplesByStandard(parentId: $parentId) {
+    ...fullAppearanceSample
+  }
+}
+
+query GetAppearanceSample($id: String, $colorFilter: ColorFilterIn) {
+  getAppearanceSample(id: $id, colorFilter: $colorFilter) {
+    ...fullAppearanceSample
+  }
+}

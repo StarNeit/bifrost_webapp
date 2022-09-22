@@ -1,0 +1,9 @@
+mutation AddTag($tag: TagIn, $parentId: ID, $parentType: String) {
+  addTag(parentId: $parentId, parentType: $parentType, tag: $tag) {
+    value
+  }
+}
+
+mutation RemoveTag($values: [String], $parentId: ID) {
+  deleteTag(parentId: $parentId, values: $values)
+}

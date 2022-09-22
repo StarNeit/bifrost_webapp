@@ -1,0 +1,11 @@
+query ListUserGroups {
+  listUserGroups {
+    ...fullUserGroup
+  }
+}
+
+query GetUserGroup {
+  getUserGroup {
+    ...fullUserGroup
+  }
+}

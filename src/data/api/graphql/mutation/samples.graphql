@@ -1,0 +1,33 @@
+mutation AddAppearanceSample(
+  $id: ID!,
+  $name: String!,
+  $creationDateTime: String!,
+  $standardId: ID,
+  $substrateId: ID,
+  $parentAppearanceSampleId: ID,
+  $measurements: [MeasurementIn],
+  $formula: FormulaIn
+) {
+  addAppearanceSample(appearanceSample: {
+    id: $id,
+    name: $name,
+    creationDateTime: $creationDateTime,
+    standardId: $standardId,
+    substrateId: $substrateId,
+    parentAppearanceSampleId: $parentAppearanceSampleId,
+    measurements: $measurements,
+    formula: $formula
+  }) {
+    ...fullAppearanceSample
+  }
+}
+
+mutation DeleteAppearanceSample($samplesToDelete: [ID]!) {
+  deleteAppearanceSample(ids: $samplesToDelete)
+},
+
+mutation UpdateAppearanceSample($appearanceSampleAppearanceSampleIn: AppearanceSampleIn) {
+  modifyAppearanceSample(appearanceSample: $appearanceSampleAppearanceSampleIn) {
+    ...fullAppearanceSample
+  }
+},

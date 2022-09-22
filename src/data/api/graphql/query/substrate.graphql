@@ -1,0 +1,19 @@
+query GetSubstrate($id: String) {
+  getSubstrate(id: $id) {
+    ...fullSubstrate
+  }
+}
+
+query ListSubstrates {
+  getSubstrate {
+    id
+    name
+    creationDateTime
+    measurements {
+      ...fullMeasurement
+    }
+    calibrationConditions {
+      ...fullCalibrationConditions
+    }
+  }
+}

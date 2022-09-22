@@ -1,0 +1,37 @@
+mutation AddAccessControlList($accessControlList: AccessControlListIn) {
+  addACL(accessControlList: $accessControlList) {
+    ...fullAccessControlList
+  }
+}
+
+mutation DeleteAccessControlLists($ids: [ID]!) {
+  deleteACL(ids: $ids)
+}
+
+mutation AddAccessControlListEntry(
+  $accessControlListEntry: AccessControlListEntryIn,
+  $parentId: ID
+) {
+  addACLEntry(accessControlListEntry: $accessControlListEntry, parentId: $parentId) {
+    userId
+    userGroupId
+    accessFlags {
+      flags
+    }
+  }
+}
+
+mutation DeleteAccessControlListEntry(
+  $parentId: ID!,
+  $ids: [ID]
+) {
+  deleteACLEntry(parentId: $parentId, ids: $ids)
+}
+
+mutation UpdateAccessControlList(
+  $accessControlListIn: AccessControlListIn
+) {
+  modifyACL(accessControlList: $accessControlListIn) {
+    ...fullAccessControlList
+  }
+}

@@ -1,0 +1,23 @@
+mutation AddSubstrate($id: ID!, $name: String, $measurements: [MeasurementIn], $calibrationParameters: [CalibrationParameterIn], $creationDateTime: String!, $aclId: ID, $calibrationConditions: [CalibrationConditionIn] ) {
+  addSubstrate(substrate: {
+    id: $id,
+    name: $name,
+    measurements: $measurements,
+    creationDateTime: $creationDateTime,
+    calibrationParameters: $calibrationParameters,
+    calibrationConditions: $calibrationConditions,
+    aclId: $aclId,
+  }) {
+    ...fullSubstrate
+  }
+}
+
+mutation DeleteSubstrate($id: [ID]!) {
+  deleteSubstrate(ids: $id)
+}
+
+mutation UpdateSubstrate($substrateIn: SubstrateIn) {
+  modifySubstrate(substrate: $substrateIn) {
+    ...fullSubstrate
+  }
+}

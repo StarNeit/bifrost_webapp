@@ -1,0 +1,60 @@
+query Assortment($id: String) {
+  getAssortment(id: $id) {
+    id
+    name
+    creationDateTime
+    industry
+    subIndustry
+    creationDateTime
+    defaultSubstrate {
+      ...fullSubstrate
+    }
+    calibrationConditions {
+      ...fullCalibrationConditions
+    }
+    calibrationParameters {
+      ...fullCalibrationParameter
+    }
+    solvent {
+      ...fullSolvent
+    }
+    printApplications {
+      ...printApplicationFull
+    }
+    weightPerArea {
+      ...weightPerArea
+    }
+  }
+}
+
+query AssortmentColorants($id: String) {
+  getAssortment(id: $id) {
+    id
+    creationDateTime
+    colorants {
+      ...fullColorant
+    }
+  }
+}
+
+query ListAssortments {
+  getAssortment {
+    id
+    name
+    creationDateTime
+    industry
+    subIndustry
+    defaultSubstrate {
+      id
+    }
+    calibrationConditions {
+      ...fullCalibrationConditions
+    }
+  }
+}
+
+query BasicMaterial($id: String) {
+  getBasicMaterial(id: $id) {
+    ...fullBasicMaterial
+  }
+}

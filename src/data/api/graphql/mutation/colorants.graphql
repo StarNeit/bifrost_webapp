@@ -1,0 +1,5 @@
+mutation AddColorant($colorant: ColorantIn, $parentId: ID!) {
+  addColorant(colorant: $colorant, parentId: $parentId) {
+    ...fullColorant
+  }
+}

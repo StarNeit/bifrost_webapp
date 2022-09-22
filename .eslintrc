@@ -1,0 +1,106 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "ignorePatterns": ["generated.ts"],
+  "plugins": [
+    "babel",
+    "compat",
+    "@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "plugin:compat/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:cypress/recommended"
+  ],
+  "rules": {
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+
+    // React 17 allows us to use JSX without importing "react"
+    "react/react-in-jsx-scope": 0,
+
+    // We're using babel-plugin-typescript-to-proptypes so we don't need to write prop-types manually
+    "react/prop-types": 0,
+
+    // Optional props are handled by typescript.
+    "react/require-default-props": 0,
+
+    // The inferred return types are sufficient for our needs
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+
+    // Disabling to make changing react components
+    "arrow-body-style": 0,
+
+    // The base "no-shadow" rule needs to be disabled to allow some typescript features to work correctly (e.g. enums).
+    // "@typescript-eslint/no-shadow" extends "no-shadow" and enables the necessary checks.
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md#how-to-use
+    "no-shadow": 0,
+    "@typescript-eslint/no-shadow": ["error"],
+
+    // The base "no-useless-constructor" rule is incorrectly triggered for typescript parameter properties.
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md#how-to-use
+    "no-useless-constructor": 0,
+    "@typescript-eslint/no-useless-constructor": ["error"],
+
+    // Extracting a partial object with destructuring assignment triggers this rule.
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "ignoreRestSiblings": true
+    }],
+
+    // We want to be able to create a thin wrapper that simply passes the props.
+    "react/jsx-props-no-spreading": 0,
+
+    // Named exports make more sense than default exports in some cases (e.g. exporting a hook, keeping the name fixed makes it obvious).
+    "import/prefer-default-export": 0,
+
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["Report", "./src/reports/ReportExample.tsx"]
+        ],
+        "extensions": [".js", ".ts", ".tsx"]
+      },
+      "node": {
+        "extensions": [".js", ".ts", ".tsx"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": [ "*.test.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "no-console": "off"
+      }
+    }
+  ],
+  "globals": {
+    "__HOST__": true,
+    "__DMS_URL__": true,
+    "__GA_ENABLED__": true,
+    "__VERSION__": true,
+    "__FORMULATION__": true,
+    "__FORMULATE_URL__": true,
+    "__CORRECT_URL__": true,
+    "__FMS_URL__": true,
+    "__REPORTING_SERVICE_URL__": true,
+    "__CFE_URL__": true
+  }
+}

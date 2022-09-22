@@ -1,0 +1,655 @@
+{
+  "formulaName": "Correction 1",
+  "projectName": "",
+  "standardVersion": "",
+  "standardName": "VORBYG Strong",
+  "sampleName": "Correction 1",
+  "recipeDisplayTableData": {
+    "controls": {
+      "canUnit": "g",
+      "recipeUnit": "g",
+      "canAmount": 522.26
+    },
+    "data": {
+      "mode": 3,
+      "totalMode": "Total",
+      "canSize": 522.2595319728352,
+      "canUnit": {
+        "id": "g",
+        "name": "g",
+        "isVolumetric": false,
+        "factorToDefaultUnit": 1
+      },
+      "layers": [{
+        "components": [{
+            "id": "6ab13de3-b32a-44cc-b692-93a4f2d13a76",
+            "name": "Leftover VIOLET",
+            "specificMass": 1,
+            "isLeftover": true,
+            "percentage": 55.83114694589935,
+            "amount": 291.5834867347198,
+            "massAmount": 291.5834867347198,
+            "cumulativeAmount": 291.5834867347198,
+            "cumulativePercentage": 55.83114694589935,
+            "originalPercentage": 99.04262159062708,
+            "originalAmount": 517.2595319728352,
+            "originalCumulativeAmount": 517.2595319728352,
+            "originalCumulativePercentage": 99.04262159062708,
+            "percentageChange": -43.629170907181496,
+            "addAmount": -225.67604523811542,
+            "sourceColorants": [{
+              "colorantId": "6ab13de3-b32a-44cc-b692-93a4f2d13a76",
+              "massFraction": 1,
+              "volumeToMassFraction": 1
+            }],
+            "creationDateTime": "2010-12-14T20:56:14.000Z",
+            "tags": [],
+            "minConcentrationPercentage": 0,
+            "maxConcentrationPercentage": 100,
+            "type": "Colorant",
+            "components": [],
+            "calibrationParameters": [{
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "k",
+                "data": {
+                  "id": "541638f7-fdaf-4fa4-8a1e-095945c42ceb",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0.76383,
+                    0.69357,
+                    0.6233,
+                    0.55304,
+                    0.50835,
+                    0.46486,
+                    0.45068,
+                    0.48136,
+                    0.55059,
+                    0.66079,
+                    0.84231,
+                    1.16528,
+                    1.58554,
+                    2.0217,
+                    2.49107,
+                    2.85147,
+                    2.92839,
+                    2.95784,
+                    2.92232,
+                    2.80948,
+                    2.46266,
+                    1.99757,
+                    1.67477,
+                    1.64573,
+                    1.85495,
+                    1.8465,
+                    1.45796,
+                    1.01564,
+                    0.67674,
+                    0.44514,
+                    0.29302,
+                    0.19016,
+                    0.10969,
+                    0.02921,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "k2",
+                "data": {
+                  "id": "eb62d1d5-987c-40f7-a6ee-6f59c70cad8d",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "s",
+                "data": {
+                  "id": "e8e902e4-4046-4995-8e5f-fb410793b55d",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0.0001,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "s2",
+                "data": {
+                  "id": "41ef9f7b-d611-4209-80c7-dbf979bc9d9b",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "strengthFactor",
+                "data": {
+                  "values": [
+                    1
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "viscosityParameters",
+                "data": {
+                  "values": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ],
+            "price": {
+              "amount": 0,
+              "currencyCode": "USD"
+            },
+            "previewColor": [
+              77,
+              0,
+              161
+            ],
+            "isAmountEditable": false,
+            "allowEditingAdditives": false
+          },
+          {
+            "id": "e2700d0f-3ee7-4a78-9de4-228728255b39",
+            "name": "XR Extender 1",
+            "specificMass": 0.88,
+            "isLeftover": false,
+            "percentage": 44.16885305410066,
+            "amount": 230.67604523811545,
+            "massAmount": 230.67604523811545,
+            "cumulativeAmount": 522.2595319728352,
+            "cumulativePercentage": 100,
+            "originalPercentage": 0.9573784093729226,
+            "originalAmount": 5,
+            "originalCumulativeAmount": 522.2595319728352,
+            "originalCumulativePercentage": 100,
+            "percentageChange": 4513.520904762309,
+            "addAmount": 225.67604523811545,
+            "sourceColorants": [{
+              "colorantId": "e2700d0f-3ee7-4a78-9de4-228728255b39",
+              "massFraction": 1,
+              "volumeToMassFraction": 1.1363636363636365
+            }],
+            "creationDateTime": "2002-07-31T09:31:09.000Z",
+            "tags": [],
+            "minConcentrationPercentage": 0,
+            "maxConcentrationPercentage": 100,
+            "type": "Clear",
+            "components": [{
+                "basicMaterial": {
+                  "id": "8d07b9f4-78b0-4489-b503-8542dce38892",
+                  "creationDateTime": "1997-06-27T13:00:20.000Z",
+                  "tags": [],
+                  "name": "Additive A",
+                  "type": "Additive",
+                  "price": {
+                    "amount": 1,
+                    "currencyCode": "EUR"
+                  }
+                },
+                "concentrationPercentage": 20
+              },
+              {
+                "basicMaterial": {
+                  "id": "cc8598ff-3caf-481d-9cb0-88ea88324b3b",
+                  "creationDateTime": "2004-08-31T16:01:43.000Z",
+                  "tags": [],
+                  "name": "Conc. XR Extender",
+                  "type": "Binder"
+                },
+                "concentrationPercentage": 80
+              }
+            ],
+            "calibrationParameters": [{
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "k",
+                "data": {
+                  "id": "2e58c347-ceaf-4488-b269-2130781728b8",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "k2",
+                "data": {
+                  "id": "6f8554b9-0c04-403b-8fa0-89dca5eb3b6a",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "s",
+                "data": {
+                  "id": "15fada6d-2981-4c25-8714-8e628101ff33",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0.0001,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "s2",
+                "data": {
+                  "id": "d3206d8b-20b1-4a0e-8815-7fb0064ca114",
+                  "spectralSampling": {
+                    "startWavelength": 380,
+                    "endWavelength": 730,
+                    "wavelengthInterval": 10
+                  },
+                  "values": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "strengthFactor",
+                "data": {
+                  "values": [
+                    1
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "viscosityMeasurement0",
+                "data": {
+                  "values": [
+                    0,
+                    35
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "viscosityMeasurement1",
+                "data": {
+                  "values": [
+                    0.11504,
+                    23
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "viscosityMeasurement2",
+                "data": {
+                  "values": [
+                    0.22481,
+                    15
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "viscosityMeasurement3",
+                "data": {
+                  "values": [
+                    0.29577,
+                    12
+                  ]
+                }
+              },
+              {
+                "calibrationConditionId": "08d25ba7-80b9-44b1-8988-1d0c43c1d51f",
+                "type": "viscosityParameters",
+                "data": {
+                  "values": [
+                    27.03732,
+                    4.58118,
+                    7.99009
+                  ]
+                }
+              }
+            ],
+            "price": {
+              "amount": 0.72,
+              "currencyCode": "USD"
+            },
+            "previewColor": [
+              254,
+              255,
+              254
+            ],
+            "isAmountEditable": false,
+            "allowEditingAdditives": false
+          }
+        ],
+        "colorants": [{
+            "colorantId": "6ab13de3-b32a-44cc-b692-93a4f2d13a76",
+            "massAmount": 291.5834867347198,
+            "massAmountOriginal": 517.2595319728352
+          },
+          {
+            "colorantId": "e2700d0f-3ee7-4a78-9de4-228728255b39",
+            "massAmount": 230.67604523811545,
+            "massAmountOriginal": 5
+          }
+        ],
+        "totalMassAmount": 522.2595319728352,
+        "totalMassAmountBasicInk": 522.2595319728352,
+        "totalVolumeAmount": 553.7153563234874,
+        "totalVolumeAmountBasicInk": 553.7153563234874,
+        "canSizeInRecipeUnits": 522.2595319728352,
+        "viscosity": 15,
+        "changeWasRequiredForAdditives": false,
+        "requiredClearMassAmountToAdd": 0
+      }],
+      "price": 166.08675257144313,
+      "currencyCode": "USD"
+    },
+    "recipeCost": "166.087 $",
+    "tableSettings": {
+      "activeColumnIds": [
+        "previewColor",
+        "name",
+        "percentage",
+        "amount",
+        "cumulativeAmount",
+        "cumulativePercentage"
+      ]
+    },
+    "correctionMode": "New",
+    "isCorrection": true,
+    "recipeUnit": {
+      "id": "g",
+      "name": "g",
+      "isVolumetric": false,
+      "factorToDefaultUnit": 1
+    },
+    "assortmentName": "Flexo/gravure printing incl colorant elements (M0, Transparent Film)",
+    "substrateName": "B M0,2,3 Cardboard 45",
+    "viscosity": 15
+  }
+}

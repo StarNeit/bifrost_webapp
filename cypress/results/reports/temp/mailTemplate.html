@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+
+<head>
+  <title>Bifrost Regression Test Results</title>
+</head>
+
+<body>
+  <strong>Tests started at: </strong>{{startOfTests}}<br>
+  <strong>Tests ended at: </strong>{{endOfTests}}<br>
+  <strong>Number of test suites: </strong>{{testSuites}}<br><br>
+  <h3>Details from the test execution:</h3>
+  <ul>
+    <li>Number of passed tests: {{passesTests}}</li>
+    <li>Number of failed tests: {{failuresTests}}</li>
+    <li>Number of skipped tests: {{skippedTests}}</li>
+    <li>Number of pending tests: {{pendingTests}}</li>
+  </ul><br>
+  <h3>Current code coverage:</h3>
+  <ul>
+    <h4>Lines:</h4>
+    <ul>
+      <li>Total: {{totalLines}}</li>
+      <li>Covered: {{coveredLines}}</li>
+      <li>Skipped: {{skippedLines}}</li>
+      <li>Percentage: {{percentageLines}}%</li>
+    </ul>
+
+    <h4>Statements:</h4>
+    <ul>
+      <li>Total: {{totalStatements}}</li>
+      <li>Covered: {{coveredStatements}}</li>
+      <li>Skipped: {{skippedStatements}}</li>
+      <li>Percentage: {{percentageStatements}}%</li>
+    </ul><br>
+
+    <h4>Functions:</h4>
+    <ul>
+      <li>Total: {{totalFunctions}}</li>
+      <li>Covered: {{coveredFunctions}}</li>
+      <li>Skipped: {{skippedFunctions}}</li>
+      <li>Percentage: {{percentageFunctions}}%</li>
+    </ul><br>
+    <h4>Branches:</h4>
+    <ul>
+      <li>Total: {{totalBranches}}</li>
+      <li>Covered: {{coveredBranches}}</li>
+      <li>Skipped: {{skippedBranches}}</li>
+      <li>Percentage: {{percentageBranches}}%</li>
+    </ul><br>
+  </ul><br>
+  <h3>For more detailed information regarding the test results, please refer to the attached report file.</h3>
+  <span><strong>A detailed code coverage is available on the S3 bucket:</strong>
+    s3://cloud-formulation-engine-project-resources/ui-tests-artifacts/coverages/{{codeCoverageReport}}.zip</span><br>
+  <span>(The coverage report can be viewed by downloading the zip file and opening the <strong>index.html</strong> file)</span>
+</body>
+
+</html>

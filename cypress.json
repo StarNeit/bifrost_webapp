@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cypress-io/cypress/develop/cli/schema/cypress.schema.json",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "baseUrl": "http://localhost:9000",
+  "defaultCommandTimeout": 30000,
+  "nyc": {
+    "all": true,
+    "include": "src/*"
+  },
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome, mocha-junit-reporter",
+    "mochawesomeReporterOptions": {
+      "reportDir": "./cypress/results/reports/mochawesome-json",
+      "reportFilename": "bifrost_regression_report",
+      "reportTitle": "Bifrost Nightly Tests",
+      "overwrite": false,
+      "html": false,
+      "json": true,
+      "quiet": true,
+      "timestamp": "dd-mm-yyyy_HH:MM:ss"
+    },
+    "mochaJunitReporterReporterOptions": {
+      "mochaFile": "./test-reports/junit-[hash].xml"
+    }
+  },
+  "requestTimeout": 30000,
+  "numTestsKeptInMemory": 0,
+  "video": false
+}

@@ -1,0 +1,5 @@
+schema:
+  - "https://jjtd7rcmsrcanhgrjw7rmat2j4.appsync-api.eu-west-1.amazonaws.com/graphql":
+      headers:
+            x-api-key: da2-nnha2og2araptc3zbtyyvphwpi
+documents: "src/data/api/graphql/**/*.graphql"

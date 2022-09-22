@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - export SHORT_COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c -8)
+      - export PACKAGE_VERSION=$(node -e "console.log(require('./package.json').version);")
+      - echo 'Switching to node 14...'
+      - n 14
+      - npm install -g npm@latest
+      - echo 'Logging in to CodeArtifact...'
+      - npm run preinstall
+      - echo 'Installing dependencies...'
+      - npm install
+  build:
+    commands:
+      - echo 'Building and deploying uat'
+      - npm run dist:prod
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist
+  name: bifrost-webapp-${PACKAGE_VERSION}-${SHORT_COMMIT_HASH}-prod.zip

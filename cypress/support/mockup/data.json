@@ -1,0 +1,59 @@
+{
+  "device": {
+    "currentTimestamp": 1628094039,
+    "firmwareVersion": "X-Rite eXact_Advanced 20B05 4.0.32355",
+    "serialNumber": "000511",
+    "type": "eXact"
+  },
+  "measurementSet": {
+    "averagingMode": "None",
+    "creationTimestamp": 1628094035,
+    "id": "20210804_182031",
+    "measurements": [
+      {
+        "colorValues": {
+          "xrga": [
+            {
+              "filter": "no",
+              "geometry": "45_0",
+              "gloss": "excluded",
+              "illumination": "A",
+              "spectral": {
+                "values": "qYfoPE2jCT3EARQ97+ESPb+vET3OUBw9GqY2PTQvRz2nYG09DA3UPbqMWz4B4LQ+k63ePnMu7T6TpPM+ls73Pjmf+j7b4Pw+Etr+Pu6WAD9lbwE/ZJECP5P9Az+XkAU/7BYHP3ehCT8zwQo/fY4LPx8SDD+S6Qw/mRUOPw==",
+                "wavelengthInterval": 10,
+                "wavelengthStart": 400
+              }
+            },
+            {
+              "filter": "no",
+              "geometry": "45_0",
+              "gloss": "excluded",
+              "illumination": "M2",
+              "spectral": {
+                "values": "SaTtPMBbAD15dAM9zcsBPV3CAT3Tig892ZQrPTJfPj2IiWY9fazQPfjcWT4kJrQ+pRLePtiT7D5lM/M+LJ33PuWW+j7M0Pw+SN3+PgWnAD/0hgE/lpkCP/oIBD8XoAU/LCkHPzWVCT+Bzgo/ZZALP1AWDD+F8Aw/GR8OPw==",
+                "wavelengthInterval": 10,
+                "wavelengthStart": 400
+              }
+            },
+            {
+              "filter": "polarized",
+              "geometry": "45_0",
+              "gloss": "excluded",
+              "illumination": "A",
+              "spectral": {
+                "values": "VwrBPE2A4Txw6sM8ArnEPFjGxjyMMts88rUHPRH6GT1Vhzw9Bwi2Pc9qST5eIas+kgTVPjlB4z5Mo+k++Z7tPoL97z4q5fE++if0PrCu9j6BBfg+Hqr5PiEf/D6nHP8+9wYBP/w7Az989QM/uB8EP7tiBD+2RwU/WMoGPw==",
+                "wavelengthInterval": 10,
+                "wavelengthStart": 400
+              }
+            }
+          ]
+        },
+        "id": "20210804_182031",
+        "imageValues": [],
+        "temperature": 0,
+        "timestamp": 1628094035
+      }
+    ],
+    "name": "20210804_182031"
+  }
+}

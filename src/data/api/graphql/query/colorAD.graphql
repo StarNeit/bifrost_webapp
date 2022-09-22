@@ -1,0 +1,8 @@
+query listColorAD($assortmentId: ID!) {
+  getColorApplicationDeviceThicknessRatiosByAssortment(parentId: $assortmentId) {
+    assortmentId
+    deviceId
+    deviceName
+    ratio
+  }
+}

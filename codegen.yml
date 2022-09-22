@@ -1,0 +1,31 @@
+overwrite: true
+schema:
+  - "https://jjtd7rcmsrcanhgrjw7rmat2j4.appsync-api.eu-west-1.amazonaws.com/graphql":
+      headers:
+        x-api-key: da2-nnha2og2araptc3zbtyyvphwpi
+documents: "src/data/api/graphql/**/*.graphql"
+generates:
+  src/data/api/graphql/generated.ts:
+    hooks:
+      afterAllFileWrite:
+        - eslint ./src/data/api/graphql/generated.ts --no-ignore --fix
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-urql"
+    config:
+      withHooks: true
+      withComponent: false
+      enumValues:
+        IlluminationGeometryType: "@xrite/cloud-formulation-domain-model#IlluminationGeometryType"
+        IlluminationLightType: "@xrite/cloud-formulation-domain-model#IlluminationLightType"
+        UVFilter: "@xrite/cloud-formulation-domain-model#UVFilter"
+        PolarizationFilterType: "@xrite/cloud-formulation-domain-model#PolarizationFilterType"
+        TransformType: "@xrite/cloud-formulation-domain-model#TransformType"
+        ColorSpaceType: "@xrite/cloud-formulation-domain-model#ColorSpaceType"
+        IlluminantType: "@xrite/cloud-formulation-domain-model#IlluminantType"
+        BackingType: "@xrite/cloud-formulation-domain-model#BackingType"
+# Available config fields for used plugins:
+# - https://www.graphql-code-generator.com/docs/plugins/typescript
+# - https://www.graphql-code-generator.com/docs/plugins/typescript-operations
+# - https://www.graphql-code-generator.com/docs/plugins/typescript-urql

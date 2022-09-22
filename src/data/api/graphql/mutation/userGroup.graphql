@@ -1,0 +1,23 @@
+mutation AddUserGroup($userGroup: UserGroupIn) {
+  addUserGroup(userGroup: $userGroup) {
+    ...fullUserGroup
+  }
+}
+
+mutation DeleteUserGroups($userGroupsToDelete: [ID]!) {
+  deleteUserGroup(ids: $userGroupsToDelete)
+}
+
+mutation AssignUserToUserGroup($childIds: [ID], $parentId: ID) {
+  assignUserToUserGroup(childIds: $childIds, parentId: $parentId)
+}
+
+mutation UnassignUserFromUserGroup($childIds: [ID], $parentId: ID) {
+  unassignUserFromUserGroup(childIds: $childIds, parentId: $parentId)
+}
+
+mutation UpdateUserGroup($userGroupIn: UserGroupIn) {
+  modifyUserGroup(userGroup: $userGroupIn) {
+    ...fullUserGroup
+  }
+}

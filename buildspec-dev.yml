@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo 'Switching to node 14...'
+      - n 14
+      - npm install -g npm@latest
+      - echo 'Logging in to CodeArtifact...'
+      - npm run preinstall
+      - echo 'Installing dependencies...'
+      - npm install
+  build:
+    commands:
+      - echo 'Building and deploying dev'
+      - npm run dist:dev
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist

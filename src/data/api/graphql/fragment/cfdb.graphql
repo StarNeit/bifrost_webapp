@@ -1,0 +1,308 @@
+fragment fullPrice on Price {
+  amount
+  currencyCode
+}
+
+fragment fullBasicMaterial on BasicMaterial {
+  id
+  name
+  creationDateTime
+  type
+  creatorId
+  creatorName
+  aclId
+  price {
+    ...fullPrice
+  }
+}
+
+fragment fullSpectralSampling on SpectralSampling {
+  startWavelength
+  endWavelength
+  wavelengthInterval
+}
+
+fragment fullMeasurementCondition on MeasurementCondition {
+  geometry {
+    description
+    measurementType
+    illuminationGeometryType
+    detectorGeometryType
+    illuminationParameter
+    detectorParameter
+  }
+  illumination {
+    illuminationLight
+    uvFilter
+    polarizationFilter
+  }
+  transformation {
+    transformType
+    netProfilerSignature
+  }
+}
+fragment fullColorantComponent on ColorantComponent {
+  basicMaterial {
+    ...fullBasicMaterial
+  }
+  concentrationPercentage
+}
+
+fragment fullCalibrationParameter on CalibrationParameter {
+  calibrationConditionId
+  type
+  data {
+    ... on NumberArray {
+      values
+    }
+    ... on Spectrum {
+      id
+      spectralSampling {
+        ...fullSpectralSampling
+      }
+      values
+    }
+  }
+}
+
+fragment fullCalibrationConditions on CalibrationCondition {
+  id
+  engineId
+  measurementConditions {
+    ...fullMeasurementCondition
+  }
+}
+
+fragment fullSolvent on Solvent {
+  id
+  name
+  creationDateTime
+  specificMass
+  viscosity
+  creationDateTime
+  components {
+    ...fullColorantComponent
+  }
+  price {
+    ...fullPrice
+  }
+}
+
+fragment fullColorant on Colorant {
+  id
+  name
+  creationDateTime
+  type
+  specificMass
+  minConcentrationPercentage
+  maxConcentrationPercentage
+  isLeftover
+  creationDateTime
+  calibrationParameters {
+    ...fullCalibrationParameter
+  }
+  components {
+    ...fullColorantComponent
+  }
+  price {
+    ...fullPrice
+  }
+  tags
+}
+
+fragment fullMeasurementSample on MeasurementSample {
+  measurementCondition {
+    ...fullMeasurementCondition
+  }
+  colorSpecification {
+    colorSpace
+    spectralSampling {
+      ...fullSpectralSampling
+    }
+    colorSpace
+    illuminant
+    observer
+    rgbPrimaries {
+      xr
+      yr
+      xg
+      yg
+      xb
+      yb
+    }
+  }
+  data {
+    extentPixels {
+      width
+      height
+    }
+    data
+  }
+}
+
+fragment fullMeasurement on Measurement {
+  id
+  creationDateTime
+  dmsMeasurementId
+  backing
+  surfaceType
+  measurementSamples {
+    ...fullMeasurementSample
+  }
+}
+
+fragment printApplicationFull on PrintApplication {
+  id
+  name
+  creationDateTime
+  creatorId
+  aclId
+  components {
+    ...fullColorantComponent
+  }
+  tags
+}
+
+fragment weightPerArea on Quantity {
+  amount
+  unit
+}
+
+fragment fullAppearanceSample on AppearanceSample {
+  id
+  creationDateTime
+  name
+  parentAppearanceSampleId
+  substrateId
+  standardId
+  formula {
+    id
+    assortmentId
+    formulationSettings
+    predictionMeasurements {
+      ...fullMeasurement
+    }
+    formulaLayers {
+      relativeThickness
+      viscosity
+      formulaComponents {
+        colorant {
+          id
+        }
+        massAmount
+      }
+      quantity {
+        unit
+        amount
+      }
+    }
+  }
+  measurements {
+    id
+    creationDateTime
+    dmsMeasurementId
+    measurementSamples {
+      ...fullMeasurementSample
+    }
+  }
+}
+
+fragment fullSubstrate on Substrate {
+  id
+  name
+  creationDateTime
+  creatorName
+  creatorId
+  aclId
+  tags
+  measurements {
+    ...fullMeasurement
+  }
+  calibrationParameters {
+    ...fullCalibrationParameter
+  }
+  calibrationConditions {
+    ...fullCalibrationConditions
+  }
+}
+
+fragment fullAccessControlList on AccessControlList {
+  id
+  creationDateTime
+  creatorId
+  creatorName
+  aclId
+  name
+  entries {
+    userId
+    userGroupId
+    accessFlags {
+      flags
+    }
+  }
+  tags
+}
+
+fragment fullStandard on Standard {
+  id
+  name
+  creationDateTime
+  creatorName
+  creatorId
+  aclId
+  derivedStandards {
+    id
+  }
+  tags
+  tolerances {
+    id
+    metric {
+      id
+      name
+      formattedName
+      defaultParameters
+    }
+    lowerLimit
+    upperLimit
+    parameters
+  }
+  pantoneLIVE {
+    libraryId
+    sampleId
+    illuminant
+    observer
+  }
+  measurements {
+    ...fullMeasurement
+  }
+}
+
+fragment fullUser on User {
+  aclId
+  creationDateTime
+  creatorId
+  creatorName
+  defaultACLId
+  fmsUserId
+  id
+  name
+  tags
+  userRights {
+    grantedAt
+    grantedBy
+    userRightType
+  }
+  xriteUserId
+}
+
+fragment fullUserGroup on UserGroup {
+  aclId
+  creationDateTime
+  creatorId
+  creatorName
+  email
+  id
+  name
+  tags
+  users
+}

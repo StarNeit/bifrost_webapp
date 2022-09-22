@@ -1,0 +1,49 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo 'Switching to node 14...'
+      - n 14
+      - npm install -g npm@latest
+      - echo 'Logging in to CodeArtifact...'
+      - npm run preinstall
+      - npm ci
+
+  pre_build:
+    commands:
+      - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\/origin\///g')"
+      - export COMMIT_INFO_MESSAGE="$(git log -1 --pretty=%B)"
+      - export COMMIT_INFO_EMAIL="$(git log -1 --pretty=%ae)"
+      - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
+      - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
+      - export COMMIT_INFO_REMOTE="$(git config --get remote.origin.url)"
+
+  build:
+    commands:
+      # Base URL
+      - export CYPRESS_BASE_URL="https://d27b7xf5gle4m7.cloudfront.net/#/"
+      - npx cypress verify
+      - npx cypress info
+      - npm run test:ui
+
+  post_build:
+    commands:
+      - npx nyc report --reporter=text-summary
+      - npm run merge-json-reports
+      - npm run generate-html-report
+      - npm run cypress:email-notification
+
+
+artifacts:
+  files:
+    - 'screenshots/**/*'
+    - 'coverages/**/*'
+    - 'reports/*.html'
+  base-directory: ./cypress/results
+
+reports:
+  junit-reports:
+    files:
+      - "./test-reports/*.xml"
+    file-format: "JUNITXML"

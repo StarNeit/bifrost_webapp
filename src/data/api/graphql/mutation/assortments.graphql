@@ -1,0 +1,13 @@
+mutation AddPrintApplication(
+  $printApplication: PrintApplicationIn
+  $parentId: ID
+  $parentType: String
+) {
+  addPrintApplication(
+    printApplication: $printApplication
+    parentId: $parentId
+    parentType: $parentType
+  ) {
+    ...printApplicationFull
+  }
+}

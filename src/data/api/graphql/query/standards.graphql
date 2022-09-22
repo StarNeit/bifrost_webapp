@@ -1,0 +1,12 @@
+query Standard($id: String, $colorFilter: ColorFilterIn) {
+  getStandard(id: $id, colorFilter: $colorFilter) {
+    ...fullStandard
+  }
+}
+
+query ListStandards {
+  listStandards {
+    id
+    name
+  }
+}

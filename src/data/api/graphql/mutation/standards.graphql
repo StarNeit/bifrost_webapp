@@ -1,0 +1,29 @@
+mutation AddStandard(
+  $id: ID!,
+  $name: String!,
+  $measurements: [MeasurementIn]!,
+  $creationDateTime: String!,
+  $aclId: ID!,
+  $tolerances: [ToleranceIn],
+) {
+  addStandard(standard: {
+    id: $id,
+    name: $name,
+    measurements: $measurements,
+    creationDateTime: $creationDateTime,
+    aclId: $aclId,
+    tolerances: $tolerances
+  }) {
+    ...fullStandard
+  }
+}
+
+mutation DeleteStandard($id: [ID!]) {
+  deleteStandard(ids: $id)
+}
+
+mutation UpdateStandard($standardIn: StandardIn) {
+  modifyStandard(standard: $standardIn) {
+    ...fullStandard
+  }
+}

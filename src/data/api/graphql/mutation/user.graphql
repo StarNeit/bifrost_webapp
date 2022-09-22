@@ -1,0 +1,15 @@
+mutation AddUser($user: UserIn) {
+  addUser(user: $user) {
+    ...fullUser
+  }
+}
+
+mutation DeleteUsers($usersToDelete: [ID]!) {
+  deleteUser(ids: $usersToDelete)
+}
+
+mutation ModifyUser($user: UserIn) {
+  modifyUser(user: $user) {
+    ...fullUser
+  }
+}

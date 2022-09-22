@@ -1,0 +1,12 @@
+query GetAccessControlLists {
+  getACL {
+    ...fullAccessControlList
+  }
+}
+
+query GetAccessControlList ($id: String) {
+  getACL (id: $id) {
+    id
+    name
+  }
+}
